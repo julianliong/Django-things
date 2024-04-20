@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import helloview
+from .views import passwordcheck
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', helloview),
+    path('check-password', passwordcheck)
 ]
